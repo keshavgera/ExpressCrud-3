@@ -1,0 +1,23 @@
+https://www.youtube.com/watch?v=Daj7vFvMQbo
+
+
+add public folder css and JS 
+
+https://getbootstrap.com/docs/5.3/getting-started/download/
+
+https://www.youtube.com/watch?v=Daj7vFvMQbo
+
+https://www.mongodb.com/try/download/community
+
+
+
+package.json
+
+"type": "module"
+
+
+
+npm run dev
+
+
+

@@ -1,0 +1,28 @@
+import mongoose from "mongoose";
+
+const StudentSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  age: {
+    type: Number,
+    required: true,
+    min: 18,
+    max: 60
+  },
+  fees: {
+    type: mongoose.Decimal128,
+    required: true
+  },
+  adv:{
+    type: Number,
+    required: true,
+  }
+});
+
+// module.exports = mongoose.model('student',StudentSchema)
+const StudentModel = mongoose.model("student1", StudentSchema);
+
+export default StudentModel;
