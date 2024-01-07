@@ -14,15 +14,11 @@ const StudentSchema = new mongoose.Schema({
   },
   fees: {
     type: mongoose.Decimal128,
-    required: true
-  },
-  adv:{
-    type: Number,
     required: true,
   }
 });
 
 // module.exports = mongoose.model('student',StudentSchema)
-const StudentModel = mongoose.model("student1", StudentSchema);
+const StudentModel = mongoose.model("student", StudentSchema);
 
 export default StudentModel;

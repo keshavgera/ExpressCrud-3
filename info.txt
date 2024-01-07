@@ -10,6 +10,10 @@ https://www.youtube.com/watch?v=Daj7vFvMQbo
 https://www.mongodb.com/try/download/community
 
 
+npm run dev 
+
+http://localhost:3000/student/
+
 
 package.json
 
@@ -18,6 +22,10 @@ package.json
 
 
 npm run dev
+
+Font Awesome
+
+https://fontawesome.com/v6/download
 
 
 

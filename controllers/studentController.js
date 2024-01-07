@@ -11,7 +11,6 @@ class StudentController {
                 name: name,
                 age: age,
                 fees: fees,
-                adv: 2500,
                 pre : pre,
            })
 
@@ -35,9 +34,16 @@ class StudentController {
         res.redirect("/student")
     }
     
-    static deleteDocById = (req, res) =>{
-        console.log("I am deleteDocById.........");
-        res.redirect("/student")
+    static deleteDocById = async (req, res) =>{
+        console.log("R_____________deleteDocById.", req.params.id);
+
+        try{
+            const result = await StudentModel.findByIdAndDelete(req.params.id)
+            res.redirect("/student")
+        }catch(error){
+            console.log("get All doc error", error);
+        }
+
     }
 
     static getAllDoc = async (req, res) =>{
@@ -46,7 +52,7 @@ class StudentController {
         try{
             const result = await StudentModel.find()
 
-            console.log("R___________ result", result);
+            // console.log("R___________ result", result);
             res.render("index", {data : result})
         }catch(error){
             console.log("get All doc error", error);

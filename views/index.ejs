@@ -10,7 +10,7 @@
             <form method="post">
                 <div class="mb-3">
                     <label for="name" class="form-label">
-                        Name 232
+                        Name
                     </label>
                     <input type="text" class="form-control"
                             id="name" name="name"
@@ -61,12 +61,33 @@
                         <tr>
                             
                             <td><%=  ++index %></td>
+                             <!-- <td><%=  item.id %></td> -->
                              <td><%=  item.name %></td>
                             <td><%=   item.age %></td>
                             <td><%=  item.fees %></td>
                             <td>
-                                <i class="fas fa-pen-square text-info"></i>
-                                <i class="fas fa-pen-square text-info"></i>
+
+                            <div class="row" style="display: flex;">
+                                <div class="col-sm-6" style="color: red;">
+
+                                    <form class="/student/edit/<%= item.id%>" method="post" class="d-inline">
+                                        <button>
+                                            <i class="fas fa-pen-square text-info"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="col-sm-6" style="color: red;">
+
+                                    <form class="/student/delete/<%= item.id%>" method="post" class="d-inline">
+                                        <button>
+                                            <i class="fas fa-trash text-danger"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+
+                       
+
                             </td>
                         </tr>
                         <% }) %>
